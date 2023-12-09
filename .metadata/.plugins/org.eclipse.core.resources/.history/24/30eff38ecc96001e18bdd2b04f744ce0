@@ -1,0 +1,17 @@
+package com.springcore.springcore.expressionlang;
+
+import java.beans.Expression;
+
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class MainExpLan {
+	public static void main(String[] args) throws Exception {
+		ExpressionParser expressionParser = new SpelExpressionParser();
+		Expression expression = (Expression) expressionParser.parseExpression("'Any string'");
+		String result = (String) expression.getValue();
+		System.out.println(result);
+
+	}
+
+}

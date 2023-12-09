@@ -1,0 +1,24 @@
+package com.springcore.springcore.expressionlang;
+
+import java.beans.Expression;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class AppMain {
+	public static void main(String[] args) throws Exception {
+		ApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/springcore/expressionlang/config.xml");
+		
+		Demo demo=context.getBean("demo",Demo.class);
+		System.out.println("++++++++++++++++++++++++++++++++++++++++");
+		System.out.println(demo.toString());
+		System.out.println("++++++++++++++++++++++++++++++++++++++++");
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression exp = (Expression) parser.parseExpression("'Hello World'");
+		String message = (String) exp.getValue();
+		System.out.println("value inside the message "+message);
+	}
+
+}
