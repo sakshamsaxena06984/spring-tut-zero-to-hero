@@ -1,0 +1,5 @@
+package com.springcore.springcore.constructorinjection;
+
+public class ConstructorAm {
+
+}

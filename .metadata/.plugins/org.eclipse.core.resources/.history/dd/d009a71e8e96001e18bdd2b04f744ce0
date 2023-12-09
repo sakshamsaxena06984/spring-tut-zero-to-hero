@@ -1,0 +1,24 @@
+package com.springcore.springcore.constructorinjection;
+
+import javax.swing.text.html.HTMLEditorKit.Parser;
+
+public class ConstructorAm {
+	private int a;
+	private int b;
+	public ConstructorAm(int a, int b) {
+		super();
+		System.out.println("it is the integer constructor!");
+		this.a = a;
+		this.b = b;
+	}
+	
+	public ConstructorAm(String a, String b) {
+		super();
+		System.out.println("it is string constructor!");
+		this.a = Integer.parseInt(a);
+		this.b = Integer.parseInt(b);
+	}
+	
+	
+
+}

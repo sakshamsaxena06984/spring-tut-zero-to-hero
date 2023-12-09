@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	private String name;
+	private List<String> tech;
+	private Set<String> dept;
+	private Map<String,String> cour;
+	
+	<bean class="com.springcore.springcore.Emp" name="emp1">
+	<property name="name" value="rohan" />
+	<property name="tech">
+	<list>
+	<value>Java</value>
+	<value>Spark</value>
+	<value>Value</value>
+	</list>
+	</property>
+	<property name="dept">
+	<set>
+	<value>BE</value>
+	<value>DE</value>
+	</set>
+	</property>
+	
+	<property name="cour">
+	<map>
+	<entry key="java" value="6" />
+	<entry key="python" value="6" />
+	<entry key="spark" value="8" />
+	</map>
+	</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,14 @@
+package com.springcore.springcore.classref;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class RefMain {
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("com.springcore.springcore.classref.config3.xml");
+		B objb=(B) context.getBean("com.springcore.springcore.classref.B");
+		System.out.println("-------------- value of object A -----------------------");
+		System.out.println(objb);
+	}
+
+}
