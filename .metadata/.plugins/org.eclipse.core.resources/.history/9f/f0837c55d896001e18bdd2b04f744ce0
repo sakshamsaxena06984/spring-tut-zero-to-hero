@@ -1,0 +1,26 @@
+package com.springcore.springcore.withoutconfig;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @Configuration : use for making class as a config class
+ * @author Saksham
+ *
+ */
+@Configuration
+@ComponentScan(basePackages = "com.springcore.springcore.withoutconfig")
+public class JavaConfig {
+	/**
+	 * @Bean: way of creating bean.
+	 * Note: here function name becomes bean name.
+	 * @return
+	 */
+	@Bean
+	public Student getStudent() {
+		Student student=new Student();
+		return student;
+	}
+
+}

@@ -1,0 +1,37 @@
+package com.springcore.springcore.stereotypeannotation;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Students {
+	private String names;
+	private int roll;
+	public Students() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Students(String names, int roll) {
+		super();
+		this.names = names;
+		this.roll = roll;
+	}
+	public String getNames() {
+		return names;
+	}
+	public void setNames(String names) {
+		this.names = names;
+	}
+	public int getRoll() {
+		return roll;
+	}
+	public void setRoll(int roll) {
+		this.roll = roll;
+	}
+	@Override
+	public String toString() {
+		return "Students [names=" + names + ", roll=" + roll + "]";
+	}
+	
+	
+
+}
